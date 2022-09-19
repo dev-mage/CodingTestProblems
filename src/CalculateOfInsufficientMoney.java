@@ -5,10 +5,13 @@ public class CalculateOfInsufficientMoney {
         for(int i = 1; i <= count; i++) {
             total += (long) price * i;
         }
-        if(total - money > 0) {
-            answer = total - money;
-        }
-        return answer;
+        // if(total - money > 0) {
+        //     answer = total - money;
+        // }
+        // return answer;
+
+//        return total - money < answer ? answer : total - money;
+        return Math.max(total - money, answer);
     }
 
     public static void main(String[] args) {
