@@ -1,3 +1,5 @@
+package programmers_level_1;
+
 public class AddNegativeAndPositiveNumbers {
     public int solution(int[] absolutes, boolean[] signs) {
         // 숫자가 음수이면 * -1

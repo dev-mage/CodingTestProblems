@@ -1,3 +1,5 @@
+package programmers_level_1;
+
 public class CalculateOfInsufficientMoney {
     public long solution(int price, int money, int count) {
         long answer = 0;

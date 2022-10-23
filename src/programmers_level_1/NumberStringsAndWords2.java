@@ -1,3 +1,5 @@
+package programmers_level_1;
+
 public class NumberStringsAndWords2 {
     final static String[] STR_ARR = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 

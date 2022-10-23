@@ -1,3 +1,5 @@
+package programmers_level_1;
+
 public class FindRemainder1 {
     public int solution(int n) {
         int answer = 0;

@@ -1,3 +1,5 @@
+package programmers_level_1;
+
 public class InnerProduct {
     public int solution(int[] a, int[] b) {
         int answer = 0;
