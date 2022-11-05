@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class TheShortestDistanceBetweenLetters {
     public static String solution(String word, char letter) {
         String answer = "";
+        /*
         StringBuilder temp = new StringBuilder();
         int len = word.length();
         for (int i = 0; i < len; i++) {
@@ -31,11 +32,30 @@ public class TheShortestDistanceBetweenLetters {
             temp.append(Math.min(cnt1, cnt2)).append(" ");
         }
         answer = temp.toString().trim();
+        */
+        StringBuilder sb = new StringBuilder();
+        int[] counts = new int[word.length()];
+        int distance = 1000;
+        for (int i = 0; i < word.length(); i++) {
+            distance = word.charAt(i) != letter ? ++distance : 0;
+            counts[i] = distance;
+        }
+        distance = 1000;
+        for (int i = word.length() - 1; i >= 0; i--) {
+            distance = word.charAt(i) != letter ? ++distance : 0;
+            counts[i] = Math.min(counts[i], distance);
+        }
+
+        for (int i : counts) {
+            sb.append(i).append(" ");
+        }
+        answer = sb.toString().trim();
         return answer;
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println(solution(in.next(), in.next().charAt(0)));
+//        Scanner in = new Scanner(System.in);
+//        System.out.println(solution(in.next(), in.next().charAt(0)));
+        System.out.println(solution("teachermode", 'e'));
     }
 }
